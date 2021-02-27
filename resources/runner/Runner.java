@@ -9,7 +9,7 @@ import io.cucumber.junit.CucumberOptions;
 @RunWith(Cucumber.class)
 @CucumberOptions(
          features="Features",
-         glue="com.Multi",
+         glue="calculatorProject/src/test/java/com/automationCalculator/Steps",
          plugin={"html:target/cucumber-html-report", "json:target/cucumber.json",
  "pretty:target/cucumber-pretty.txt","usage:target/cucumber-usage.json", 
 "junit:target/cucumber-results.xml"},
