@@ -16,7 +16,7 @@ public class Setup {
 	  DesiredCapabilities cap = DesiredCapabilities.chrome();
       cap.setCapability("applicationCacheEnabled", false);
 	  driver.manage().window().maximize();
-		  
+		  System.out.println("hi");
 	}
 	@After
 	public void tearDown() {

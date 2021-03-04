@@ -1,14 +1,14 @@
 Feature: Calculator 
 
   @calculator @priority-high
-  Scenario: Add two numbers
+  Scenario Outline: Add two numbers
    Given I go to the calculator page
    And The calculator page is displayed
-   And I click on button 1
+   And I click on button <number1>
 	 And I click on the plus button
-   And I click on button 2
+   And I click on button <number2>
    When I click on the equal button
-	 Then The calculator outputs 4
+	 Then The calculator outputs <outputValue>
 	 Examples:
 		 | number1 | number2 | outputValue | 
 		 |1			   |2        |3            |
@@ -28,9 +28,9 @@ Feature: Calculator
 	 Examples:
 		 | number1 | number2 | outputValue | 
 		 |3			   |2        |1.5          |
-		 |0			   |3        |0            |
-		 |4			   |2        |2            |
-		 |9		     |9        |1            |
+		 |0			   |3        |0.0            |
+		 |4			   |2        |2.0            |
+		 |9		     |9        |1.0            |
 		 
 	@calculator  @priority-high
   Scenario: Multiple operations 
@@ -76,9 +76,9 @@ Feature: Calculator
 	 Then The calculator outputs the decimal <outputValue>
 	 Examples:
 		 | number1 | number2 | outputValue | 
-		 |5			   |5        |0            |
-		 |5			   |6        |-1           |
-		 |9			   |5        |4            |
+		 |5			   |5        |0.0            |
+		 |5			   |6        |-1.0           |
+		 |9			   |5        |4.0            |
 		 
   @calculator  @priority-high
   Scenario Outline: Multiply two numbers
@@ -91,7 +91,7 @@ Feature: Calculator
 	 Then The calculator outputs the decimal <outputValue>
 	 Examples:
 		 | number1 | number2 | outputValue | 
-		 |5			   |6        |30           |
-		 |0			   |3        |0            |
-		 |3			   |0        |0            |
-		 |9		     |1        |9            |
+		 |5			   |6        |30.0           |
+		 |0			   |3        |0.0            |
+		 |3			   |0        |0.0            |
+		 |9		     |1        |9.0            |
